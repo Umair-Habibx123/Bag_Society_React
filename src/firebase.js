@@ -4,14 +4,15 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAWgqd3RxEEvKIxQljXg2qwWpGTVR9hIkY",
-  authDomain: "bag-society-2d720.firebaseapp.com",
-  projectId: "bag-society-2d720",
-  storageBucket: "bag-society-2d720.firebasestorage.app",
-  messagingSenderId: "1010677507847",
-  appId: "1:1010677507847:web:cd2245932c6befc9db47a2",
-  measurementId: "G-FTH5B55BYN",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
+
 
 const app = initializeApp(firebaseConfig);
 
